@@ -1,1 +1,110 @@
-<h1>Example App: Home</h1>
+<header>
+  <!-- navigation -->
+  <nav class="navbar navbar-light bg-light">
+    <div class="container">
+      <a class="navbar-brand" href="/">
+        Random Password Generator
+        <i class="fa-solid fa-key"></i>
+      </a>
+    </div>
+  </nav>
+
+  <div class="banner"></div>
+</header>
+
+<div class="container-sm mt-3">
+  <div class="row">
+    <div class="col-sm-10">
+      <form id="form" novalidate>
+
+        <div class="row">
+          <div class="col-4">
+            <label for="passwordLength" class="form-label">Password Length</label>
+          </div>
+          <div class="col-8">
+            <input type="number" class="form-control" id="passwordLength" placeholder="Length should be between 4 and 16..." required>
+            <div class="valid-feedback"></div>
+            <div class="invalid-feedback"></div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-4">
+            <label for="lowercase" class="form-label">Include Lowercase Characters</label>
+          </div>
+          <div class="col-8">
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" name="lowercase" type="checkbox" id="lowercase" value="lowercase">
+              <label class="form-check-label" for="lowercase">
+                (e.g. abcdefg)
+              </label>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-4">
+            <label for="uppercase" class="form-label">Include Uppercase Characters</label>
+          </div>
+          <div class="col-8">
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" name="uppercase" type="checkbox" id="uppercase" value="uppercase">
+              <label class="form-check-label" for="uppercase">
+                (e.g. ABCDEFG)
+              </label>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-4">
+            <label for="numbers" class="form-label">Include Numbers</label>
+          </div>
+          <div class="col-8">
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" name="numbers" type="checkbox" id="numbers" value="numbers">
+              <label class="form-check-label" for="numbers">
+                (e.g. 123456)
+              </label>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-4">
+            <label for="symbols" class="form-label">Include Symbols</label>
+          </div>
+          <div class="col-8">
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" name="symbols" type="checkbox" id="symbols" value="symbols">
+              <label class="form-check-label" for="symbols">
+                (e.g. @#$%)
+              </label>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-4">
+            <label for="exclude" class="form-label">Exclude Characters</label>
+          </div>
+          <div class="col-8">
+            <input type="text" class="form-control" id="exclude" placeholder="These characters will be excluded ..." required>
+            <div class="valid-feedback"></div>
+            <div class="invalid-feedback"></div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-12">
+            <p class="form-label">Password Generated: <span id="generated-password"></span></p>
+          </div>  
+        </div>
+
+        <button id="submit-btn" type="submit" class="btn btn-primary">Generate Password</button>
+      </form>
+    </div>
+  </div>
+</div>
+
+{{!-- <p id="generated-password"></p> --}}

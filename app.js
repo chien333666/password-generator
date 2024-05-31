@@ -11,15 +11,11 @@ app.set('views', './views') // 指定檔案位置
 app.use(express.static('public'))
 
 app.get('/', (req, res) => {
-  res.redirect('/movies')
+  res.redirect('/password-generator')
 })
 
-app.get('/movies', (req, res) => {
+app.get('/password-generator', (req, res) => {
   res.render('index')
-})
-
-app.get('/movie/:id', (req, res) => {
-  res.send(`showing movie ${req.params.id}`)
 })
 
 
