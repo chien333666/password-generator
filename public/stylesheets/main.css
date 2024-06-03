@@ -7,3 +7,8 @@ body {
   background-color: white;
   /* 白色 */
 }
+
+.bg-custom-cyan {
+  background-color: rgb(176, 255, 255);
+  /* 透明綠色 */
+}

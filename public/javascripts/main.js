@@ -50,10 +50,11 @@ function onFormSubmitted(event) {
 
   // 在生成並顯示密碼後，更改背景顏色
   function updateBackgroundColor() {
-    const passwordLabel = document.getElementById('password-generated');
+    const passwordLabel = document.getElementById('your-password');
+    const passwordGenerated = document.getElementById('generated-password');
     // 使用bootstrap的bg success類別作為示例，可以根據需要更換其他類別
-    passwordLabel.classList.add('bg-success'); // 添加背景顏色
-    passwordLabel.classList.add('text-white'); // 添加文字顏色以提高可讀性
+    passwordLabel.classList.add('bg-custom-cyan'); // 添加背景顏色
+    passwordGenerated.classList.add('text-danger'); // 添加文字顏色以提高可讀性
   }
 
   // 檢查字元類型是否至少選取了一種
@@ -92,7 +93,5 @@ function onFormSubmitted(event) {
       feedback.textContent = element.validationMessage;
     }
   });
-
-
 
 }
