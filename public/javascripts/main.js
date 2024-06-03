@@ -6,7 +6,7 @@ submitButton.addEventListener("click", function onSubmitButtonClicked(event) {
   event.preventDefault();
   event.stopPropagation();
 
-  // 调用onFormSubmitted中的代码来生成并显示密码
+  // 呼叫on form submitted中的程式碼來產生並顯示密碼
   onFormSubmitted(event);
 });
 
@@ -48,6 +48,14 @@ function onFormSubmitted(event) {
     return true; // 表示驗證成功
   }
 
+  // 在生成並顯示密碼後，更改背景顏色
+  function updateBackgroundColor() {
+    const passwordLabel = document.getElementById('password-generated');
+    // 使用bootstrap的bg success類別作為示例，可以根據需要更換其他類別
+    passwordLabel.classList.add('bg-success'); // 添加背景顏色
+    passwordLabel.classList.add('text-white'); // 添加文字顏色以提高可讀性
+  }
+
   // 檢查字元類型是否至少選取了一種
   if (!checkCharacterTypes()) {
     return; // 停止函數執行
@@ -76,6 +84,7 @@ function onFormSubmitted(event) {
 
   // 顯示產生的密碼
   document.getElementById('generated-password').innerText = `${password}`;
+  updateBackgroundColor();
 
   form.querySelectorAll("input").forEach((element) => {
     if (!element.checkValidity()) {
@@ -83,4 +92,7 @@ function onFormSubmitted(event) {
       feedback.textContent = element.validationMessage;
     }
   });
+
+
+
 }
