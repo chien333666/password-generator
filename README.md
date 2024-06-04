@@ -3,9 +3,9 @@ Random Password Generator can generate random passwords based on different optio
 
 ## Project Screenshot
 
-![image](https://github.com/chien333666/password-generator/tree/main/public/img/screenshot1.png)
+![image](https://github.com/chien333666/password-generator/blob/main/public/img/screenshot1.png)
 
-![image](https://github.com/chien333666/password-generator/tree/main/public/img/screenshot2.png)
+![image](https://github.com/chien333666/password-generator/blob/main/public/img/screenshot2.png)
 
 ## Features
 1. Randomly generated 4-16 character long passwords.
