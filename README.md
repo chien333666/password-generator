@@ -26,10 +26,10 @@ Before you begin, ensure you have met the following requirements:
 ## Installation and Execution
 
 1. Clone the repository:
-git clone https://github.com/chien333666/restaurant-list.git
+git clone https://github.com/chien333666/password-generator.git
 
 2. Navigate to the project directory:
-cd restaurant-list
+cd password-generator
 
 3. Install the dependencies:
 npm install
