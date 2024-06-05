@@ -25,6 +25,11 @@ function onFormSubmitted(event) {
 
   // 如果密碼長度不符合要求，則return false
   function isValidPasswordLength(length) {
+    // 檢查 length 是否包含小數點
+    if (length.includes('.')) {
+      alert('Password length must be an integer without decimal points.');
+      return false;
+    }
     return length >= 4 && length <= 16;
   }
 
@@ -33,6 +38,9 @@ function onFormSubmitted(event) {
     alert('Password length must be between 4 and 16.');
     return; // 停止函數執行
   }
+
+
+
 
   function checkCharacterTypes() {
     const uppercaseChecked = document.getElementById('uppercase').checked;
@@ -72,7 +80,9 @@ function onFormSubmitted(event) {
   // 如果排除特定字符，則從available chars中移除這些字符
   if (excludeChars) {
     excludeChars.split('').forEach(char => {
-      availableChars = availableChars.replace(new RegExp(char, 'g'), '');
+      // 這裡添加了對特殊字符的轉義
+      const escapedChar = char.replace(/[-\/\\^$*+?.()|[\]{}]/g, '\\$&');
+      availableChars = availableChars.replace(new RegExp(escapedChar, 'g'), '');
     });
   }
 

@@ -18,7 +18,7 @@
             <label for="passwordLength" class="form-label">Password Length</label>
           </div>
           <div class="col-8">
-            <input type="number" class="form-control" id="passwordLength" placeholder="Length should be between 4 and 16..." required>
+            <input type="number" min="4" max="16" step="1" class="form-control" id="passwordLength" placeholder="Length should be between 4 and 16..." required>
             <div class="valid-feedback"></div> <!-- 顯示驗證成功的訊息 -->
             <div class="invalid-feedback"></div> <!-- 顯示驗證失敗的訊息 -->
           </div>
